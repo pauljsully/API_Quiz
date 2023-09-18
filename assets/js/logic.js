@@ -21,7 +21,7 @@ timerEl.innerText = 0;
 //High Score Array
 var HighScores = [];
 
- //assign array details for questions 
+ //array details for questions 
 var arrayShuffledQuestions
 var QuestionIndex = 0
 
@@ -62,7 +62,7 @@ function startGame() {
     startScreen.classList.remove('show');
     questionsEl.classList.remove('hide');
     questionsEl.classList.add('show');
-    //Shuffle the questions so they show in random order
+  
     arrayShuffledQuestions = questions.sort(() => Math.random() - 0.5)
     setTime()
     setQuestion()
@@ -73,7 +73,7 @@ var setQuestion = function() {
     displayQuestion(arrayShuffledQuestions[QuestionIndex]);
 }
 
-//remove answer buttons
+
 var resetAnswers = function() {
     while (choicesEl.firstChild) {
         choicesEl.removeChild(choicesEl.firstChild)
